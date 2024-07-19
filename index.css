@@ -1,3 +1,273 @@
 body {
-    background-color: #f0f0f0; /* Gris clair */
+    center {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #303030;
+    }
+    background-color: white; /* Gris clair */
+}
+
+.elements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    flex-basis: 23%;
+    max-width: 75%;
+    box-sizing: border-box;
+    margin: 10px 20px; /* Réduit la marge supérieure/inférieure à 10px et maintient la marge gauche/droite à 20px */
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .element {
+        flex-basis: 50%; /* Sur les écrans plus petits, affiche 2 éléments par ligne */
+        max-width: 50%;
+    }
+}
+
+.skills-icons i {
+    font-size: 6em; /* Augmente la taille des icônes */
+    color: #686868; /* Couleur des icônes par défaut */
+    display: block;
+    transition: color 0.5s ease; /* Transition fluide pour le changement de couleur */
+    text-align: center;
+}
+
+.skills-icons i:hover {
+    color: #007bff; /* Couleur bleue lors du survol */
+}
+
+.skills-icons .fa-js-square:hover {
+    color: #f7df1e; /* Jaune */
+}
+
+.skills-icons .fa-css3-alt:hover {
+    color: #f16529; /* Orange */
+}
+
+.skills-icons .fa-terminal:hover {
+    color: #000000; /* Vert */
+}
+
+.skills-icons .fa-react:hover {
+    color: #61dbfb; /* Bleu clair */
+}
+
+.skills-icons .fa-node-js:hover {
+    color: #68a063; /* Vert foncé */
+}
+
+.img_back_container {
+    position: relative;
+    text-align: center;
+
+}
+
+.img_back {
+    width: 100%; /* Ajustez selon la largeur désirée */
+    height: auto; /* Pour maintenir le ratio de l'image */
+}
+
+.img_back-about-me {
+    width: 100%; /* Ajustez selon la largeur désirée */
+    height: auto; /* Pour maintenir le ratio de l'image */
+}
+
+.top-right-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.top-right-buttons-return {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px; /* Espacement entre les boutons */
+    background-color: rgb(255, 255, 255); /* Fond blanc */
+    color: rgb(128, 128, 128); /* Texte gris */
+    text-decoration: none;
+    border: 3px solid rgb(128, 128, 128); /* Contours gris */
+    border-radius: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Ajout de l'effet de fondu */
+}
+
+.button-return {
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    right: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(255, 255, 255); /* Fond blanc */
+    color: rgb(128, 128, 128); /* Texte gris */
+    text-decoration: none;
+    border: 3px solid rgb(128, 128, 128); /* Contours gris */
+    border-radius: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Ajout de l'effet de fondu */
+}
+
+.button-return:hover {
+    background-color: rgb(128, 128, 128); /* Gris */
+    color: rgb(255, 255, 255); /* Blanc */
+    cursor: pointer; /* Changes cursor to a pointer */
+}
+.desc_main {
+    font-family: "Alumni Sans", sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    color: #303030;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: rgb(128, 128, 128); /* Gris */
+    color: rgb(255, 255, 255); /* Blanc */
+    cursor: pointer; /* Changes cursor to a pointer */
+}
+
+.img_back_container {
+    position: relative;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-out;
+}
+
+.name_main {
+    font-family: "Alumni Sans", sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    color: #303030;
+    margin-top: 20px;
+}
+
+.name_main_ {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2.8em;
+    color: #303030;
+    margin-top: 20px;
+}
+
+.project-button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(255, 255, 255); /* Fond blanc */
+    color: rgb(128, 128, 128); /* Texte gris */
+    text-decoration: none;
+    border: 3px solid rgb(128, 128, 128); /* Contours gris */
+    border-radius: 20px;
+}
+
+.title_main {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    color: #303030;
+    margin-top: 20px;
+}
+
+.button_container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text_main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    color: #303030;
+}
+
+.desc_avatar {
+    font-family: "Alumni Sans", sans-serif;
+    text-align: center;
+    color: #303030;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.avatar {
+    border-radius: 10% 30% 50% 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+@keyframes swipeLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.swipe-left {
+    animation: swipeLeft 0.5s forwards;
+}
+
+@keyframes swipeRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(+100%);
+    }
+}
+
+.swipe-right {
+    animation: swipeRight 0.5s backwards;
 }
