@@ -8,6 +8,10 @@ body {
     background-color: white; /* Gris clair */
 }
 
+.desc-icons {
+    font-family: 'Alumni Sans', sans-serif;
+}
+
 .elements-container {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +40,25 @@ body {
         flex-basis: 50%; /* Sur les écrans plus petits, affiche 2 éléments par ligne */
         max-width: 50%;
     }
+}
+
+.element {
+    position: relative;
+    animation: lift 1s ease-out forwards;
+}
+
+.element::after {
+    content: attr(data-language);
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.element:hover::after {
+    opacity: 1;
 }
 
 .skills-icons i {
@@ -68,6 +91,10 @@ body {
 
 .skills-icons .fa-node-js:hover {
     color: #68a063; /* Vert foncé */
+}
+
+.skills-icons .fa-git-alt:hover {
+    color: #ff8000; /* Vert foncé */
 }
 
 .img_back_container {
@@ -120,7 +147,8 @@ body {
     right: 1%;
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
-    padding: 10px;
+    padding: 1em; /* Utilisez em pour le padding */
+    font-size: 1vw; /* Utilisez vw pour la taille de la police */
     background-color: rgb(255, 255, 255); /* Fond blanc */
     color: rgb(128, 128, 128); /* Texte gris */
     text-decoration: none;
@@ -135,7 +163,7 @@ body {
     cursor: pointer; /* Changes cursor to a pointer */
 }
 .desc_main {
-    font-family: "Alumni Sans", sans-serif;
+    font-family: 'Alumni Sans', sans-serif;
     text-align: center;
     font-size: 1.5em;
     color: #303030;
@@ -270,4 +298,38 @@ body {
 
 .swipe-right {
     animation: swipeRight 0.5s backwards;
+}
+
+/* Styles pour les écrans de taille moyenne (tablette) */
+@media (max-width: 768px) {
+    .text_main {
+        font-size: 0.8em;
+    }
+    .title_main {
+        font-size: 1.6em;
+    }
+    .desc_avatar {
+        font-size: 1.6em;
+    }
+    .element {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Styles pour les petits écrans (mobile) */
+@media (max-width: 480px) {
+    .text_main {
+        font-size: 0.6em;
+    }
+    .title_main {
+        font-size: 1.2em;
+    }
+    .desc_avatar {
+        font-size: 1.2em;
+    }
+    .element {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
 }
